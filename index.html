@@ -30,20 +30,20 @@
         <div class="form-row three-small-container">
             <div class="day-name three-box">
                 <div class="">Day</div>
-                <input type="text" id="datepicker" name="day" class="field date" placeholder="Day" required />
+                <input type="text" id="datepicker" name="day" autocomplete="off" class="field date" placeholder="Day" required />
             </div>
 
             <div class="time-name three-box">
                 <div class="">Time</div>
-                <input type="text" id="sometime" name="time" class="field time" placeholder="Time" required />
+                <input type="text" id="sometime" name="time" autocomplete="off" class="field time" placeholder="Time" required />
             </div>
 
 
 
             <div class="select-option three-box">
                 <div title="title" class="">People</div>
-                <select name="people" class="field  people" placeholder="People" required>
-                    <option default></option>
+                <select name="people" class="field  people">
+
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -67,10 +67,12 @@
                 </select>
             </div>
         </div>
+
+        <div class="border-line"></div>
         <!-- end row form three -->
 
-        <section class="form-details">
-
+        <!-- <section> -->
+        <div class="form-details">
             <div class="form-row ">
                 <div class="title">Name of reservation</div>
                 <input type="text" name="name" class="field" placeholder="Name of reservation" required>
@@ -97,7 +99,7 @@
             <div class="form-row checkbox-box">
                 <div class="checkbox-radio">
                     <input type="checkbox" class="field" value="yes">
-                    <label for="veg-menu">
+                    <label>
                         <span>Vegetarian menu</span>
 
                     </label>
@@ -110,21 +112,17 @@
             <br>
             <br>
 
-            <button class="btn-send btn" type="submit">Send</button>
-        </section>
+            <button class="btn-send btn  btn-ghost" type="submit">Send</button>
+        </div>
+        <!-- </section> -->
     </form>
 </div>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery-time/jquery.timepicker.min.js"></script>
-
-
-
-
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/jquery-time/jquery.timepicker.min.js"></script>
 
 <script>
     $("#datepicker").datepicker();
-
     $('#sometime').timepicker();
 </script>
 </body>
