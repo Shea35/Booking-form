@@ -6,99 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Booking Form</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="css/jQuery-time/jquery.timepicker.min.css">
+
+
+    <link rel="stylesheet" href="css/jQuery-ui/jquery-ui.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<div>
+<h1>Restaurant Booking 24 </h1>
 
+<div id="form-container">
+    <form action="send-restaurant-contact-from">
 
-    <h1>Booking Form</h1>
-    <div id="form-container">
-        <form action="send-restaurant-contact-from">
+        <div class="form-row three-small-container">
+            <div class="day-name three-box">
+                <div class="">Day</div>
+                <input type="text" id="datepicker" name="day" class="field date" placeholder="Day" required />
+            </div>
 
-            <div class="form-row three">
-                <div>
-                    <div class="title">Day</div>
-                    <input type="text" name="day" class="field date" placeholder="Day" required>
-                </div>
-
-                <div>
-                    <div class="title">Time</div>
-                    <input type="text" name="time" class="field time" placeholder="Time" required>
-                </div>
-
+            <div class="time-name three-box">
+                <div class="">Time</div>
+                <input type="text" id="sometime" name="time" class="field time" placeholder="Time" required />
+            </div>
 
 
 
-                <div>
-                    <div title="title">People</div>
-                    <select name="people" class="field" placeholder="People" required>
-                        <option default></option>
-                        <option value="1"></option>
-                        <option value="2"></option>
-                        <option value="3"></option>
-                        <option value="4"></option>
-                        <option value="5"></option>
-                        <option value="6"></option>
-                        <option value="7"></option>
-                        <option value="8"></option>
-                        <option value="9"></option>
-                        <option value="10"></option>
-                        <option value="11"></option>
-                        <option value="12"></option>
-                        <option value="13"></option>
-                        <option value="14"></option>
-                        <option value="15"></option>
-                    </select>
+            <div class="select-option three-box">
+                <div title="title" class="">People</div>
+                <select name="people" class="field  people" placeholder="People" required>
+                    <option default></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        <!-- end row form three -->
+
+        <section class="form-details">
+
+            <div class="form-row ">
+                <div class="title">Name of reservation</div>
+                <input type="text" name="name" class="field" placeholder="Name of reservation" required>
+            </div>
+
+
+            <div class="form-row">
+                <div class="title">Email</div>
+                <input type="email" name="email" class="field" placeholder="Email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="title">Phone number</div>
+                <input type="email" name="phone" class="field" placeholder="Phone number" required>
+            </div>
+
+            <div class="form-row">
+                <div class="title">Message</div>
+                <textarea name="message" class="field" placeholder="Message" required></textarea>
+            </div>
+
+            <!-- checkbox -->
+
+            <div class="form-row checkbox-box">
+                <div class="checkbox-radio">
+                    <input type="checkbox" class="field" value="yes">
+                    <label for="veg-menu">
+                        <span>Vegetarian menu</span>
+
+                    </label>
                 </div>
             </div>
-            <!-- end row form three -->
 
-            <section>
+            <!-- end of checkbox -->
 
-                <div class="form-row">
-                    <div class="title">Name of reservation</div>
-                    <input type="text" name="name" class="field" placeholder="Name of reservation" required>
-                </div>
+            <br>
+            <br>
+            <br>
 
-
-                <div class="form-row">
-                    <div class="title">Email</div>
-                    <input type="email" name="email" class="field" placeholder="Email" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="title">Phone number</div>
-                    <input type="email" name="phone" class="field" placeholder="Phone number" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="title">Message</div>
-                    <textarea name="message" class="field" placeholder="Message" required></textarea>
-                </div>
-
-                <!-- checkbox -->
-
-                <div class="form-row">
-                    <div class="checkbox-radio">
-                        <input type="checkbox" class="field" value="yes">
-                        <label for="veg-menu">
-                            <span>Vegetarian menu</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- end of checkbox -->
+            <button class="btn-send btn" type="submit">Send</button>
+        </section>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-time/jquery.timepicker.min.js"></script>
 
 
 
-                <button class="btn" type="submit">Send</button>
 
 
-            </section>
-        </form>
+<script>
+    $("#datepicker").datepicker();
 
-    </div>
-
-    </body>
+    $('#sometime').timepicker();
+</script>
+</body>
 
 </html>
